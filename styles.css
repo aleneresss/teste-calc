@@ -7,7 +7,7 @@
 }
 
 body {
-    background: linear-gradient(190deg, #2c0000, #000000);
+    background: linear-gradient(190deg, #1a0005, #000000);
     color: #fff;
     display: flex;
     justify-content: center;
@@ -25,21 +25,21 @@ body {
     max-height: 700px;
     width: 100%;
     animation: fadeIn 1s ease-in-out;
-    border: 1px solid #820000;
+    border: 1px solid #8b0000;
 }
 
 h1 {
     font-size: 28px;
     margin-bottom: 15px;
-    color: #ff0000;
+    color: #ff0033;
     text-align: center;
     animation: slideDown 0.8s ease-in-out;
-    text-shadow: 0 0 10px rgba(60, 255, 0, 0.3);
+    text-shadow: 0 0 10px rgba(255, 0, 51, 0.3);
 }
 
 p {
     font-size: 16px;
-    color: #c0c0c0;
+    color: #e0d0d0;
     margin-bottom: 20px;
     text-align: center;
     animation: slideUp 0.8s ease-in-out;
@@ -56,15 +56,15 @@ p {
     padding: 20px;
     background-color: #121212;
     border-radius: 10px;
-    border: 1px solid #820000;
+    border: 1px solid #8b0000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     max-height: 500px;
 }
 
 .col-left:hover, .col-middle:hover, .col-right:hover, .col-history:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
-    border-color: #ff0000;
+    box-shadow: 0 8px 20px rgba(255, 0, 51, 0.3);
+    border-color: #ff0033;
 }
 
 .col-middle {
@@ -78,20 +78,20 @@ p {
 
 .input-group {
     margin-bottom: 20px;
-    color: #fc8686;
+    color: #ff9999;
 }
 
 label {
     display: block;
     font-size: 14px;
-    color: #fc8686;
+    color: #ff9999;
     margin-bottom: 8px;
 }
 
 input[type="number"], input[type="date"], textarea, select {
     width: 100%;
     padding: 12px;
-    border: 1px solid #820000;
+    border: 1px solid #8b0000;
     border-radius: 8px;
     font-size: 14px;
     color: #fff;
@@ -100,16 +100,16 @@ input[type="number"], input[type="date"], textarea, select {
 }
 
 input[type="number"]:focus, input[type="date"]:focus, textarea:focus, select:focus {
-    border-color: #fc8686;
+    border-color: #ff9999;
     outline: none;
-    box-shadow: 0 0 8px rgba(252, 134, 134, 0.6);
+    box-shadow: 0 0 8px rgba(255, 153, 153, 0.6);
     background-color: #0f0f0f;
 }
 
 button {
     width: 100%;
     padding: 14px;
-    background-color: #a21f1f;
+    background-color: #8b0000;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -120,16 +120,34 @@ button {
 }
 
 button:hover {
-    background-color: #9a1b1b;
+    background-color: #660000;
     transform: translateY(-3px);
 }
 
-#listaParcelas {
+.btn-salvar {
+    background-color: #5c0000;
+    margin-top: 10px;
+}
+
+.btn-salvar:hover {
+    background-color: #3a0000;
+}
+
+.btn-limpar {
+    background-color: #b22222;
+    margin-bottom: 20px;
+}
+
+.btn-limpar:hover {
+    background-color: #8b0000;
+}
+
+#listaParcelas, #historicoConsultas {
     list-style: none;
     margin-top: 20px;
 }
 
-#listaParcelas li{
+#listaParcelas li, #historicoConsultas li {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -139,14 +157,14 @@ button:hover {
     margin-bottom: 10px;
     font-size: 14px;
     color: #fff;
-    border: 1px solid #820000;
+    border: 1px solid #8b0000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#listaParcelas li:hover {
+#listaParcelas li:hover, #historicoConsultas li:hover {
     transform: translateX(5px);
-    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
-    border-color: #fc8686;
+    box-shadow: 0 4px 10px rgba(255, 0, 51, 0.4);
+    border-color: #ff9999;
 }
 
 /* Estilo do interruptor (toggle switch) */
@@ -171,7 +189,7 @@ button:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #820000;
+    background-color: #8b0000;
     transition: 0.4s;
     border-radius: 20px;
 }
@@ -189,7 +207,7 @@ button:hover {
 }
 
 input:checked + .slider {
-    background-color: #fc8686;
+    background-color: #ff9999;
 }
 
 input:checked + .slider:before {
@@ -198,34 +216,18 @@ input:checked + .slider:before {
 
 /* Animações */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 @keyframes slideDown {
-    from {
-        transform: translateY(-20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes slideUp {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 /* Scrollbar */
@@ -240,32 +242,32 @@ input:checked + .slider:before {
 }
 
 .col-left::-webkit-scrollbar-thumb {
-    background: #820000;
+    background: #8b0000;
     border-radius: 10px;
     border: 3px solid #121212;
 }
 
 .col-left::-webkit-scrollbar-thumb:hover {
-    background: #ff0000;
+    background: #ff0033;
 }
 
 .resultado {
-    background-color: #270808;
-    border: 1px solid #5a0a0a;  
+    background-color: #240000;
+    border: 1px solid #5a0a0a;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 15px;
 }
 
 .resultado p {
-    color: #f0e6ff;
+    color: #ffdada;
     font-weight: bold;
     margin-bottom: 0;
 }
 
 .total {
-    background-color: #270808; 
-    border: 1px solid #5a0a0a;  
+    background-color: #240000;
+    border: 1px solid #5a0a0a;
     border-radius: 8px;
     font-weight: bold;
     padding: 15px;
@@ -273,41 +275,38 @@ input:checked + .slider:before {
 }
 
 .liberado {
-    background-color: #370000;
-    border: 1px solid #9a1b1b;  
+    background-color: #330000;
+    border: 1px solid #8b0000;
     border-radius: 8px;
     padding: 15px;
     margin-bottom: 15px;
     position: relative;
 }
 
-
 .total p, .liberado p {
-    color: #f0e6ff;
+    color: #ffdada;
     margin-bottom: 0;
 }
 
-
 big {
     font-size: 18px;
-    color: #fc8686; 
+    color: #ff9999;
 }
 
 strong {
-    color: #ff0000; 
+    color: #ff0033;
     font-weight: 600;
 }
 
 .creds p {
     position: relative;
-    color: #7d7d7d;
+    color: #a0a0a0;
     right: -1%;
     bottom: -120px;
     font-size: 40px;
     margin: 0;
     font-family: 'Roboto';
 }
-
 
 .liberado::after {
     content: "";
@@ -316,6 +315,6 @@ strong {
 }
 
 .liberado:hover {
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.671);
+    box-shadow: 0 0 15px rgba(255, 0, 51, 0.3);
     transition: box-shadow 0.3s ease;
 }
