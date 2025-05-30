@@ -250,7 +250,7 @@ input:checked + .slider:before {
 }
 
 .resultado {
-    background-color: #120827;
+    background-color: #270808;
     border: 1px solid #5a0a0a;  
     padding: 15px;
     border-radius: 8px;
